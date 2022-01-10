@@ -27,3 +27,31 @@ print("Your mission is to find the treasure.")
 
 #Write your code below this line 👇
 
+#Variables
+action1 = None
+action2 = None
+action3 = None
+action4 = None
+
+#Users first choice
+action1 = input("\nYou awake to find you're laying on the ground, do you stay laying down or stand up? L or S: ").upper()
+
+if action1 == "L": # You die
+  print("\nYou lay on the ground, not bothering to move, suddenly a horse comes racing past and tramples you to death.\n\nTHE END")
+else: # You go on
+  action2 = input("\nYou jump to your feet, just in time to step back and avoid a horse, racing down the lane.\
+                  \nThere's something in the field opposite, do you want to investigate? Y or N: ").upper()
+  if action2 =="N": # you die
+    print("\nYou're too lazy to move, that damn horse comes flying back down the lane and tramples you to death.\n\nTHE END")
+  else: # You go on
+    action3 = input("\nYou cross the lane and walk into the field, it's a small mound of freshly dug soil.\
+                      \nDo you want to start digging? Y or N: ").upper()
+    if action3 =="N": # you die
+      print("\nYou're too lazy to dig, you lay there on the grass and fall asleep.\n\nTHE END")
+    else: # You go on
+      action4 = input("\nYou dig down with your hands and find a small locked chest with 3 coloured keys.\
+                      \nWhich key do you choose, Red, Yellow or Green? R,Y or G: ").upper()
+      if action4 == "R" or action4 == "Y": # You die
+        print("\nOh no, wrong key, it a trap!  The case explodes, blowing you to pieces!\n\nTHE END")
+      else: # You WIN
+        print("\nHooray!!! The chest opens and it's full of gold. Well done!")
